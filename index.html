@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <title>To-Do App</title>
+</head>
+<body>
+    <nav class="task-category">
+        
+        <!-- data category is to fetch the selected category -->
+
+        <span data-category="Personal" class="active">Personal</span>
+        <span data-category="Office">Office  </span>
+        <span data-category="Birthday">Birthday</span>
+        <span data-category="Travel">Travel</span>
+    </nav>
+    <br><br>
+    <!-- flex them align center and box -->
+
+
+<div class="task-input">
+    
+     <div class="form-section" id="form-Personal">
+        <!-- class for to group each category form foe switching -->
+        <div class="task-completion-details">
+            <!-- this class is for group styling  -->
+              <label for="taskname"><strong>Add your task: </strong></label>
+              <input type="text" id="taskname" value="">
+              <!-- <input type="submit" value="done"><br><br> -->
+              <br><br>
+
+              <label for="duedate"><strong>Due date:</strong></label>
+              <input type="date" name="duedate" id="duedate">
+              <br><br>
+
+              <label for="duetiming"><strong>Set Time:</strong></label>
+              <input type="time" name="appt" id="duetiming">
+              <br><br>
+              <label for="Reminder-set"><strong>Set Reminder:</strong></label>
+              <input type="time" id="Reminder-set" name="reminder">
+              
+              <br><br>
+              <strong>
+              <input type="button" value="Submit" id="final-submit"></strong>
+             <!-- click event later via js -->
+        </div>
+     </div>
+     <div class="form-section" id="form-Office" style="display: none;">
+        <div class="task-completion-details">
+              <label for="taskname"><strong>Add your Office task: </strong></label>
+              <input type="text" id="taskname-office" value="">
+              <br><br>
+
+              <label for="duedate"><strong>Due date:</strong></label>
+              <input type="date" name="duedate-office" id="duedate-office">
+              <br><br>
+
+              <label for="duetiming"><strong>Set Time:</strong></label>
+              <input type="time" name="appt" id="duetiming-office">
+              <br><br>
+          
+              <label for="Reminder-set"><strong>Set Reminder:</strong></label>
+              <input type="time" id="Reminder-set-office" name="reminder">
+              <br><br>
+              
+              <strong>
+              <input type="button" value="Submit" id="submit-office"></strong>
+        </div>
+     </div>
+     <div class="form-section" id="form-Birthday" style="display: none;">
+        <div class="task-completion-details">
+            <label for="taskname-b"><strong>Birthday Of:</strong></label>
+            <input type="text" id="taskname-b">
+           <br><br>
+
+            <label for="duedate-b"><strong>Date:</strong></label>
+            <input type="date" id="duedate-b">
+            <br><br>
+
+            <label for="Reminder-set-b"><strong>Set Reminder:</strong></label>
+            <input type="time" id="Reminder-set-b">
+            <br><br>
+
+            <input type="button" value="Submit" id="submit-birthday">
+        </div>
+     </div>
+     <div class="form-section" id="form-Travel" style="display: none;">
+        <div class="task-completion-details">
+           
+
+            <label for="destination"><strong>Destination:</strong></label>
+            <input type="text" id="destination">
+            <br><br>
+
+            <label for="duedate-t"><strong>Date:</strong></label>
+            <input type="date" id="duedate-t">
+            <br><br>
+
+            <label for="duetiming-t"><strong>Time:</strong></label>
+            <input type="time" id="duetiming-t">
+            <br><br>
+
+            <label for="Reminder-set-t"><strong>Reminder:</strong></label>
+            <input type="datetime-local" id="Reminder-set-t">
+            <br><br>
+             
+            <input type="button" value="Submit" id="submit-travel">
+
+        </div>
+     </div>
+</div>
+
+     <div id="task-list">
+
+     </div>
+         
+    <script src="script.js"></script>
+</body>
+</html>
