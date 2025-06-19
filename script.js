@@ -4,15 +4,6 @@
 // const Reminderset=document.getElementById('Reminder-set');
 // const button=document.getElementById('final-submit');
 
-if('Notification' in window){
-    // getting user permission for notification
-    Notification.requestPermission().then(permission=>{
-        if(permission !=="granted"){
-            alert("Please enable notification to receive task reminders!");
-        }
-    });
-}
-
 // storing the currect lab category
 let currentCategory="Personal";//this is default tab
 
@@ -254,6 +245,15 @@ if(targetForm){
    targetForm.style.display="block"
 }
     document.querySelector(`[data-category="${currentCategory}"]`).classList.add('active');
+
+    if('Notification' in window){
+    // getting user permission for notification
+    Notification.requestPermission().then(permission=>{
+        if(permission !=="granted"){
+            alert("Please enable notification to receive task reminders!");
+        }
+    });
+}
 };
 
 
